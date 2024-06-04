@@ -252,7 +252,7 @@ String CAcces::GetParam()
 	else 
 		param+= "\nEn service";
 	param += "\nHeure système: \n";
-	param += GetHeureSystem.GetMessage();
+	param += GetHeureSystem().GetMessage();
 	param += "\nfermeture: \n";
 	param += m_instant_ferme.GetMessage();
 	return param;
