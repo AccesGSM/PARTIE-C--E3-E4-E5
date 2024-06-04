@@ -28,7 +28,7 @@
 #define PORT_SERVEUR 83
 #define SERVEUR_WEB "sn2hasp.free.beeceptor.com"
 
-//Api monsieur Irazoqui :
+//Api élèves E1 et E2 : 
 /**/#define SERVEUR_WEB "185.182.169.30"
 #define PORT_SERVEUR 1024
 #define API    		"/api/verifierReservationApi.php?telephone="
