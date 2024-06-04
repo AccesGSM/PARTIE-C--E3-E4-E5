@@ -30,14 +30,9 @@ using namespace std;
 #define	uint16_t	unsigned int
 //FIN ARDUINO */ 
 
-extern String sms_regie;
-extern String parametre;
 
 
-String Int2String(int nombre, uint16_t decimal);
-int GetDigit(int nombre);
 //Récupère la valeur d'un paramètre de la réponse serveur par exemple
 String GetValeur(String& reponse, String parametre);
-String GetStringLongueurFixe(String texte, int longueurfixe);
 
 #endif

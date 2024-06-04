@@ -29,20 +29,17 @@
 #define SERVEUR_WEB "sn2hasp.free.beeceptor.com"
 
 //Api monsieur Irazoqui :
-
-/*#define SERVEUR_WEB "185.182.169.30"
+/**/#define SERVEUR_WEB "185.182.169.30"
 #define PORT_SERVEUR 1024
-#define API    		"/api/verifierReservationApi?telephone="*/
+#define API    		"/api/verifierReservationApi.php?telephone="
 
 //Api monsieur Pons :
-
-#define SERVEUR_WEB "acces-gsm.alwaysdata.net"
+/*#define SERVEUR_WEB "acces-gsm.alwaysdata.net"
 #define PORT_SERVEUR 80
-#define API    		"/api/verifierReservationApi.php?telephone="
+#define API    		"/api/verifierReservationApi.php?telephone="*/
 /*#define API    		"/recup.reservation.2.0.php?telephone="*/
 
 //Api Dany Sevrin (Ne fonctionne pas encore le 02/04/2024)
-
 /*#define SERVEUR_WEB "10.0.2.16"
 #define PORT_SERVEUR 1024
 #define API    		"/api/verifierReservationApi.php?telephone=0646811496"*/
@@ -62,8 +59,8 @@ class CAppli
 		~CAppli(){};
 
 		void Init();
-		void Run(unsigned long intervalle);
-		void Run();
+		void Run(unsigned long intervalle); //temporisée
+		void Run();	//rapide
 		
 		String GetInfoRecup(String& reponse_serveur);
 

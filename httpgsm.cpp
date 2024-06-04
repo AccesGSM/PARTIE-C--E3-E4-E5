@@ -39,10 +39,10 @@ int CHttpGsm::EnvoiRequete(String api, String param)
 	
 }
 
-String CHttpGsm::GetReponseClient(int delai)
+String CHttpGsm::GetReponseServeur(int delai)
 {
 	String reponse = "";
-	Serial.println("Attente réponse client");
+	Serial.println("Attente réponse serveur");
 	unsigned long	attendu = millis()+delai;
 	
 	//Attente limitée par le délai
@@ -50,13 +50,13 @@ String CHttpGsm::GetReponseClient(int delai)
 	{
 		if ((millis()%1000)==0)
 		{
-			delay(10); 
+			delay(10); //affichage débug nombre d'octets reçus
 			Serial.println(reponse.length());
 		};
 		//Octets du serveur lus et stockés
 		if (available()) reponse += (char)read();
 
-		//Le serveur est déconnecté on stoppe l'attente client
+		//Le serveur est déconnecté on stoppe l'attente serveur
 		if (!available() && !connected()) 
 		{
 			Serial.println("Déconnecté.");
@@ -65,5 +65,6 @@ String CHttpGsm::GetReponseClient(int delai)
 		}
 	}
 	Serial.println("Fin d'attente.");
+	reponse.replace("<br>", "\n");
 	return reponse; 
 }

@@ -146,7 +146,7 @@ String CInstant::GetMessage()
 	message += String(GetJour()) + "/";
 	message += GetMois(4) + "/";
 	message += String(GetAn()) + " A ";
-	message += Get2Digit(GetHeure()+1) + "H";
+	message += Get2Digit(GetHeure()) + "H";
 	message += Get2Digit(GetMinute()) + ":";
 	message += Get2Digit(GetSec()) + "\n";
  

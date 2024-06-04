@@ -21,7 +21,7 @@ class CHttpGsm : public GSMClient
 		
 		void Init(String serveur, int port);
 		int EnvoiRequete(String api, String param);
-		String GetReponseClient(int delai);
+		String GetReponseServeur(int delai);
 };
 //Fin des directives de préprocesseur
 #endif

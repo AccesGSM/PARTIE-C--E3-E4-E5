@@ -1,30 +1,4 @@
 #include "appli.h"
-
-String parametre = "id:";
-String sms_regie = "nom : Salle judo, id:5, portA:3, portB:4";
-
-
-//Converti un entier en string
-//Complète avec des 0 avant le nombre dans le string
-String Int2String(int nombre, uint16_t decimal)
-{
-	if (nombre<10)
-		return "0" + String(nombre);
-	return String(nombre);
-}
-
-//Retourne le nombre de digits d'un entier
-int GetDigit(int nombre)
-{
-	int digit = 0;
-	do{
-		nombre = nombre/10;
-		digit++;
-	}
-	while (nombre);
-	return digit;
-}
-
 /*
 String CInstant::GetValeur( const String& reponse_serv, const String& balise) 
 {
@@ -70,27 +44,4 @@ String GetValeur(String& reponse, String parametre)
 
 	// Retourne la valeur trouvée
 	return valeur;
-	
-  Serial.print("Valeur trouvée : ");
-  Serial.println(valeur);
-}
-
-String GetStringLongueurFixe(String texte, int longueurfixe) 
-{
-    // Longueur du texte
-    int longtxt = texte.length();
-	//int longrestante = textefixe - longueurfixe;
-	String textefixe = "";
-	
-    // Boucler pour ajouter les espaces à la fin du texte
-    for (int i = 0; i < longueurfixe; i++) 
-	{
-        if (i < longtxt)
-			textefixe += texte[i];
-		else
-			textefixe += ".";
-    }
-
-    // Retourner le texte de longueur fixe
-    return textefixe;
 }
